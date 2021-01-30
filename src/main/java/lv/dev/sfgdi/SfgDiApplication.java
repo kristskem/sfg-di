@@ -1,7 +1,9 @@
 package lv.dev.sfgdi;
 
 import lv.dev.sfgdi.controllers.ConstructorInjectedController;
+import lv.dev.sfgdi.controllers.GreetingServiceController;
 import lv.dev.sfgdi.controllers.MyController;
+import lv.dev.sfgdi.services.GreetingService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -22,5 +24,10 @@ public class SfgDiApplication {
 				context.getBean("constructorInjectedController", ConstructorInjectedController.class);
 
 		System.out.println(constructorInjectedController.getGreetings());
+
+		System.out.println("---Greeting service controller---");
+		GreetingServiceController greetingServiceController = context.getBean("greetingServiceController",
+																			  GreetingServiceController.class);
+		greetingServiceController.printServiceGreetings();
 	}
 }
