@@ -3,7 +3,7 @@ package lv.dev.sfgdi.services;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Profile("LV")
+@Profile({"LV", "default"})
 @Service("languageService")
 public class LatvianGreetingService implements GreetingService {
 
