@@ -2,6 +2,7 @@ package lv.dev.sfgdi;
 
 import lv.dev.sfgdi.controllers.ConstructorInjectedController;
 import lv.dev.sfgdi.controllers.GreetingServiceController;
+import lv.dev.sfgdi.controllers.LanguageController;
 import lv.dev.sfgdi.controllers.MyController;
 import lv.dev.sfgdi.services.GreetingService;
 import org.springframework.boot.SpringApplication;
@@ -29,5 +30,9 @@ public class SfgDiApplication {
 		GreetingServiceController greetingServiceController = context.getBean("greetingServiceController",
 																			  GreetingServiceController.class);
 		greetingServiceController.printServiceGreetings();
+
+		System.out.println("---Profile---");
+		LanguageController languageController = context.getBean("languageController", LanguageController.class);
+		System.out.println(languageController.sayHello());
 	}
 }
