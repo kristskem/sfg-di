@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
  * Created by jt on 12/28/19.
  */
 
-@Service
-@Profile({"dog", "default"})
+//@Service
+//@Profile({"dog", "default"})
 public class DogPetService implements PetService {
 
     @Override
